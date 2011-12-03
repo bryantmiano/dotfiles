@@ -11,5 +11,68 @@
 @import partials/foundation/typography
 @import partials/foundation/ui
 
-/* Artfully masterminded by ZURB */
+=ir
+  display: block
+  border: 0
+  text-indent: -999em
+  overflow: hidden
+  background-color: transparent
+  background-repeat: no-repeat
+  text-align: left
+  direction: ltr
+  
+html
+  body
+    header
+      +twelve-columns
+      +clearfix
+      background: #E3173E
+      position: relative
+      padding: 20px 0
+      width: 100%
+      margin-top: 20px
+      overflow: visible
+      h1
+        +two-columns
+        @extend .hide-on-phones
+        @extend .hide-on-tablets
+        +ir
+        background: image-url('players-logo.png') no-repeat
+        width: image-width('players-logo.png') !important
+        height: image-height('players-logo.png')
+        position: absolute
+        left: 0
+        top: -108%
+        z-index: 500
+        
+      h2
+        +ten-columns
+        +offset-by-two
+        +font-size(28)
+        color: white
+        font-family: Georgia
+        font-weight: bold
+        font-style: italic
+        margin-bottom: 0
 
+#main_nav
+  +offset-by-two
+  font-family: "Cabin Condensed"
+  text-transform: Uppercase
+  margin-top: 60px
+  li
+    float: left
+    a
+      color: black
+      font-weight: 500
+      letter-spacing: 0.03em
+      padding: 18px
+      &:hover
+        color: #E5173E
+        
+#sidebar
+  +two-columns
+  background: pink
+#main_content
+  +ten-columns
+  background: red
